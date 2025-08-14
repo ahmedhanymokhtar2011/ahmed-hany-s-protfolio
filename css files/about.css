@@ -129,3 +129,50 @@ body {
     height: 200px;
   }
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.page {
+    height: 100vh;
+    position: relative;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 10s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(50%) skew(0, -10deg);
+    }
+    to {
+        transform: translateX(-30%) skew(10deg, 0);
+    }
+}
+
+/* شاشات الموبايل الصغيرة */
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .card img {
+        border-radius: 8px;
+    }
+}
+
