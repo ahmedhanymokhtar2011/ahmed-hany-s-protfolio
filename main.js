@@ -1,8 +1,13 @@
-<<<<<<< HEAD
-function toggleMenu() {
-    document.querySelector('.nav-menu').classList.toggle('show');
-=======
-function toggleMenu() {
-    document.querySelector('.nav-menu').classList.toggle('show');
->>>>>>> 7b8935238e6bba45e6e912cc57adb13bac5ab7b1
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger");
+  const navMenu = document.querySelector(".nav-menu");
+  const closeBtn = document.querySelector(".close-btn");
+
+  burger.addEventListener("click", function () {
+    navMenu.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    navMenu.classList.remove("show");
+  });
+});
