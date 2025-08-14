@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.page {
+    height: 100vh;
+    position: relative;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 10s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(50%) skew(0, -10deg);
+    }
+    to {
+        transform: translateX(-30%) skew(10deg, 0);
+    }
+}
+
+/* شاشات الموبايل الصغيرة */
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .card img {
+        border-radius: 8px;
+    }
+}
+
+
+.contact-container{
+  max-height: 800px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #1f2937;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+.contact-container h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 30px;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.list ul {
+    list-style: none;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.list li {
+    font-size: 25px;
+    color: #333;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.list li i {
+    color: #1f2937;
+    font-size: 25px;
+    min-width: 25px;
+    transition: 1s;
+}
+
+.list li:hover {
+    color: #0075ff;
+    cursor: pointer;
+}
+
+
+ a{
+    text-decoration: none !important;
+}
+
+
+/*btn*/
+
+button {
+    padding: 20px;
+    background-color: #0075ff;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    margin: 10px;
+    margin-bottom: 20px !important;
+    border-radius: 50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: transparent;
+    color: #1f2937;
+    border: 1px solid #1f2937;
+
+}
+
+
+
+/* الشاشات المتوسطة */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+        width: 90%;
+    }
+    .contact-container h2 {
+        font-size: 24px;
+    }
+    .list li {
+        font-size: 20px;
+    }
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 480px) {
+    .contact-container {
+        padding: 10px;
+    }
+    .contact-container h2 {
+        font-size: 20px;
+    }
+    .list li {
+        font-size: 16px;
+        gap: 8px;
+    }
+    .list li i {
+        font-size: 18px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
