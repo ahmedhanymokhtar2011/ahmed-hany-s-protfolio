@@ -19,18 +19,27 @@
   font-size: 24px;
   font-weight: bold;
   color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
   text-transform: uppercase;
 }
 
 /* nav menu */
 .nav-menu {
-  display: flex ;
+  display: flex;
   gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
-  }
+}
 
 
   /* burger icon */
@@ -38,7 +47,14 @@
   display: none;
   font-size: 28px;
   cursor: pointer;
-  transition: 1s;
+}
+
+/*close btn*/
+
+.close-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 
@@ -46,15 +62,15 @@
   text-decoration: none;
   font-size: 18px;
   color: #1f2937;
-  padding: 5px;
-    text-transform: uppercase;
-transition: 1s;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 
-.nav-menu li a:hover{
-    color:gray;
+.nav-menu li a:hover {
+  color: gray;
 }
+
 /* underline for "Home" */
 .under {
   text-decoration: underline !important;
@@ -215,8 +231,9 @@ margin-top: 60px;
 .projects-container {
     color: #1f2937;
     max-width: 900px;
-    margin: 10px;
-}
+   margin: 10px auto; /* هنا خليتها auto عشان تيجي في النص */
+    text-align: center; 
+  }
 
 .section-title {
     text-transform: uppercase;
@@ -227,11 +244,10 @@ margin-top: 60px;
 
 .projects-list {
   display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
     gap: 20px;
-    justify-items: center;
-margin-left: 50px;
-}
+    justify-items: center; /* يوسّط الكروت داخل الأعمدة */
+    margin-left: 0; /* شيل الإزاحة */  }
 
 .project-card {
     width: 90%;
@@ -394,6 +410,88 @@ button:hover{
     margin-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  } 
+  .projects-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.project-card h2 {
+    margin: 15px 0 10px;
+    color: #1f2937;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+}
 
 /* شاشات الموبايل الصغيرة (عرض أقل من 576px) */
 @media (max-width: 576px) {
@@ -448,155 +546,5 @@ button:hover{
 }
 
 
-/* الموبايل */
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 10px 0;
-    z-index: 999;
-  }
-
-  .nav-menu.show {
-    display: flex;
-  }
-
-  .nav-menu li {
-    text-align: center;
-    padding: 10px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none; /* اخفاء القايمة افتراضي */
-    flex-direction: column;
-    width: 100%;
-    background-color: #f8f8f8;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 10px 0;
-    z-index: 999;
-  }
-
-  .nav-menu.show {
-    display: flex; /* عرضها عند الضغط على البرجر */
-  }
-
-  .nav-menu li {
-    text-align: center;
-    padding: 10px 0;
-  }
-}
-
-
-.projects-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-    color: #1f2937;
-}
-
-.section-title {
-    text-transform: uppercase;
-    font-size: 30px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ddd inset;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card img {
-    max-width: 80%;
-    border-radius: 10px;
-}
-
-.project-card h2 {
-    margin: 15px 0 10px;
-    color: #1f2937;
-}
-
-.project-card p {
-    font-size: 15px;
-    line-height: 1.5;
-    color: #555;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .projects-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .projects-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 768px) {
-  .links nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* مسافة صغيرة بينهم */
-  }
-
-  .logo {
-    order: -1; /* العنوان يظهر الأول */
-  }
-
-  .burger {
-    order: 1; /* البرجر بعده */
-  }
-}
-
-
-.close-btn {
-  font-size: 28px;
-  cursor: pointer;
-  text-align: right;
-  padding: 10px 20px;
-  display: none; /* يبان بس في الموبايل */
-}
-
-@media (max-width: 768px) {
-  .close-btn {
-    display: block;
-  }
-}
 
  /*end of codes*/
