@@ -178,7 +178,7 @@
     background-color: #0075ff;
     color: white;
     font-size: 15px;
-    font-weight: 100;
+    font-weight: bold;
     transition: 1s;
     cursor: pointer;
   }
@@ -375,40 +375,86 @@ button:hover{
 
 /* شاشات التابلت والموبايل المتوسطة (عرض أقل من 992px) */
 @media (max-width: 992px) {
+    .burger {
+    display: block;
+  }
+
   /* القائمة */
   .nav-menu {
-    gap: 10px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  .nav-menu li a {
-    font-size: 16px;
+    .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 10px 0;
   }
 
   /* الهيدر */
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .text-content {
-    max-width: 100%;
-  }
-  .text-content button {
-    width: auto;
-  }
-  .container img {
-    margin-top: 20px;
-  }
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  } 
+  .projects-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    color: #1f2937;
+}
 
-  /* الـ Info */
-  .info {
-    max-width: 100%;
+.section-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
     text-align: center;
-  }
+}
 
-  /* الكروت */
-  .projects-list {
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 0;
-  }
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.project-card h2 {
+    margin: 15px 0 10px;
+    color: #1f2937;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+}
 }
 @media (max-width: 768px) {
   .burger {
