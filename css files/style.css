@@ -162,7 +162,7 @@
 .image img {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
+  border-radius: 100%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -475,12 +475,21 @@ button:hover{
   .nav-menu.show {
     display: flex;
   }
-
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+ .text-content button{
+width: 130px; }
   .nav-menu li {
     text-align: center;
     padding: 10px 0;
   }
-  
+  .image img {
+    border-radius: 100%;
+  }
   .close-btn {
     display: block;
     position: absolute;
@@ -492,6 +501,12 @@ button:hover{
     margin: auto;
     padding: 40px 20px;
     color: #1f2937;
+}
+.info{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .section-title {
@@ -563,7 +578,7 @@ button:hover{
     height: 180px;
   }
 
-  /* الـ Info */
+  /* الـ oo */
   .info h2 {
     font-size: 24px !important;
   }
