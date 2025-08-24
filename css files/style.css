@@ -506,11 +506,21 @@ width: 130px; }
     padding: 40px 20px;
     color: #1f2937;
 }
-.info {
-  display: flex;
+  .info {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: center;  
     text-align: center;
+    max-width: 100% !important;   /* خليها تاخد العرض كله */
+    margin: 20px auto;            /* وسطها أفقياً */
+  }
+
+  .info h2,
+  .info p {
+    text-align: center;
+    margin: 5px 0;
+  }
 }
 
 .section-title {
@@ -556,8 +566,6 @@ width: 130px; }
     color: #555;
 }
 
-}
-
 /* شاشات الموبايل الصغيرة (عرض أقل من 576px) */
 @media (max-width: 576px) {
   /* القائمة */
@@ -583,14 +591,22 @@ width: 130px; }
   }
 
   /* الـ oo */
-  .info h2 {
-    font-size: 24px !important;
-  }
-  .info p {
-    font-size: 16px;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    max-width: 100% !important;   /* خليها تاخد العرض كله */
+    margin: 20px auto;            /* وسطها أفقياً */
   }
 
-  /* الكروت */
+  .info h2,
+  .info p {
+    text-align: center;
+    margin: 5px 0;
+  }
+}  /* الكروت */
   .projects-list {
     grid-template-columns: 1fr;
   }
@@ -608,8 +624,6 @@ width: 130px; }
     margin: 5px;
     font-size: 14px;
   }
-}
-
 
 
  /*end of codes*/
