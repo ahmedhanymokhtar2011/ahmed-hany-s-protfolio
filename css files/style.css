@@ -234,7 +234,8 @@ margin-top: 60px;
     color: #1f2937;
     max-width: 900px;
    margin: 10px auto; /* هنا خليتها auto عشان تيجي في النص */
-    text-align: center; 
+   text-align: center; 
+
   }
 
 .section-title {
@@ -245,11 +246,13 @@ margin-top: 60px;
 }
 
 .projects-list {
-  display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+  display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* مرن على حسب الشاشة */
     gap: 20px;
-    justify-items: center; /* يوسّط الكروت داخل الأعمدة */
-    margin-left: 0; /* شيل الإزاحة */  }
+    justify-items: center;
+  
+  }
+
 
 .project-card {
     width: 90%;
@@ -281,7 +284,7 @@ margin-top: 60px;
 
 .project-card p {
     font-size: 15px;
-    line-height: 50px;
+    line-height: 30px;
     color: #1f2937;
 }
 
@@ -309,6 +312,8 @@ border: 1px solid #0075ff !important;
 transition: 1s;
 cursor: pointer;
     border-radius: 50px;
+            font-weight: bold !important;
+
 }
 
 
@@ -410,7 +415,7 @@ button:hover{
     right: 20px;
   } 
   .projects-container {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
     color: #1f2937;
@@ -521,7 +526,7 @@ width: 130px; }
     text-align: center;
     margin: 5px 0;
   }
-}
+
 
 .section-title {
     text-transform: uppercase;
@@ -538,6 +543,7 @@ width: 130px; }
 }
 
 .project-card {
+  width: 75%;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -565,7 +571,7 @@ width: 130px; }
     line-height: 1.5;
     color: #555;
 }
-
+}
 /* شاشات الموبايل الصغيرة (عرض أقل من 576px) */
 @media (max-width: 576px) {
   /* القائمة */
@@ -606,7 +612,7 @@ width: 130px; }
     text-align: center;
     margin: 5px 0;
   }
-}  /* الكروت */
+  /* الكروت */
   .projects-list {
     grid-template-columns: 1fr;
   }
@@ -624,6 +630,6 @@ width: 130px; }
     margin: 5px;
     font-size: 14px;
   }
-
+}
 
  /*end of codes*/
