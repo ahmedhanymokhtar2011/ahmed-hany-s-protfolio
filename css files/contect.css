@@ -22,7 +22,7 @@
     transform: translateX(-50%) skew(0, -10deg);
     border-radius: 50%;
     z-index: -1;
-    animation: waving 10s ease-in-out infinite alternate;
+    animation: waving 5s ease-in-out infinite alternate;
 }
 
 @keyframes waving {
@@ -60,6 +60,9 @@
     border-radius: 10px;
     box-shadow: 0 0 10px #ddd inset;
     background: rgba(255, 255, 255, 0.9);
+backdrop-filter: blur(10px);
+background: transparent;
+border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 
