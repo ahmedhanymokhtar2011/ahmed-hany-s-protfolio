@@ -1,0 +1,649 @@
+/*pegan of codes*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* container */
+.links nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f8f8f8;
+}
+
+/* logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+/* nav menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+  /* burger icon */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+
+}
+
+/*close btn*/
+
+.close-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1f2937;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+
+.nav-menu li a:hover {
+  color: gray;
+}
+
+/* underline for "Home" */
+.under {
+  text-decoration: underline !important;
+  text-underline-offset: 10px !important;
+  text-decoration-thickness: 2px !important;
+  text-decoration-color: #000;
+}
+
+
+/*for background animation*/
+.page {
+    height: 100vh;
+    position: relative;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #0075ff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 10s ease-in-out infinite alternate;
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(50%) skew(0, -10deg);
+    }
+    to {
+        transform: translateX(-30%) skew(10deg, 0);
+    }
+}
+
+/* شاشات الموبايل الصغيرة */
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .card img {
+        border-radius: 8px;
+    }
+}
+
+
+/*container*/
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+
+}
+
+.text-content {
+  max-width: 60%;
+    flex: 1 1 500px;
+
+  }
+
+
+  .text-content h2{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #1f2937;
+    font-weight: bold;
+      margin-bottom: 20px;
+
+  }
+
+
+  .text-content p{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #1f2937;
+    font-weight: 200;
+      margin-bottom: 20px;
+
+  }
+
+  
+.image{
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.image img {
+   width: 200px;
+  height: 200px;
+  border-radius: 50% !important; /* دايرة كاملة */
+  object-fit: cover;             /* يقص الصورة بحيث تملى الدائرة */
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+  /*btn*/
+
+  .text-content button{
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 30%;
+    background-color: #0075ff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 1s;
+    cursor: pointer;
+    border: 1px solid #0075ff;
+  }
+
+
+  .text-content button:hover{
+    background-color: transparent;
+    border: 1px solid #1f2937;
+    color: #1f2937;
+  }
+
+
+.container img {
+            box-shadow: 0 0 10px #ddd inset !important;
+
+  max-width: 300px; /* حجم الصورة */
+  height: auto;
+  object-fit: cover;
+  border-radius:50%; /* اختياري للتجميل */
+}
+
+
+/*info*/
+
+.info{
+    padding: 20px;
+margin-top: 60px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #1f2937;
+    max-width: 60%;
+}
+
+/*info title*/
+
+
+.info h2{
+    text-transform: uppercase;
+    font-size: 30px !important;
+    padding: 10px;
+}
+
+
+.info p{
+    line-height: 1cm;
+}
+
+/*products container*/
+
+.projects-container {
+    color: #1f2937;
+    max-width: 900px;
+   margin: 10px auto; /* هنا خليتها auto عشان تيجي في النص */
+   text-align: center; 
+
+  }
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 50px !important;    
+}
+
+.projects-list {
+  display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* مرن على حسب الشاشة */
+    gap: 20px;
+    justify-items: center;
+  
+  }
+
+
+.project-card {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 2s;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.project-card:hover{
+    scale: 1.1;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.project-card h2{
+    color: #1f2937;
+}
+
+
+.project-card p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #1f2937;
+}
+
+.project-card p:hover{
+        color: #0075ff !important;
+}
+
+.projects-container button{
+    display: block;
+    margin: 30px auto;
+   text-decoration: none !important;
+
+}
+
+ button{
+      text-decoration: none !important;
+border: 1px solid #0075ff !important;
+    color: white;
+    padding: 20px;
+    margin:30px 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: 200;
+    background-color: #0075ff;
+transition: 1s;
+cursor: pointer;
+    border-radius: 50px;
+            font-weight: bold !important;
+
+}
+
+
+button a{
+    text-decoration: none !important;
+    transition: 1s;
+    cursor: pointer;
+    color: white;
+        border: 1px solid #0075ff;
+}
+
+
+.projects-container > a {
+    text-decoration: none !important;
+}
+.projects-container > a:hover {
+    text-decoration: none !important;
+}
+
+button:hover{
+        color: #1f2937 !important;
+    background-color: transparent;
+        border: 1px solid #0075ff;
+}
+
+/*web footer*/
+
+.footer {
+  background-color:#f8f8f8; /* رمادي فاتح أنيق */
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* علشان يبقى ريسبونسيف */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.footer-nav a {
+    text-transform: uppercase;
+  color: #1f2937;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #0075ff;
+}
+
+
+/* ========================
+   📱 Responsive Design
+   ======================== */
+
+/* شاشات التابلت والموبايل المتوسطة (عرض أقل من 992px) */
+@media (max-width: 992px) {
+    .burger {
+    display: block;
+  }
+
+  /* القائمة */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+    .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* الهيدر */
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  } 
+  .projects-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.project-card h2 {
+    margin: 15px 0 10px;
+    color: #1f2937;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+}
+
+/*for mobiles*/
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+ .container{
+    flex-direction: column;
+    text-align: center;
+    gap: 15px; /* علشان تقرّب الصورة من الكلام */
+  }
+
+  .image img {
+ width: 180px;
+    height: 180px; 
+    top: -100px !important;
+   } 
+
+    .text-content button{
+width: 130px; }
+  .nav-menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  } 
+  .projects-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    max-width: 100% !important;   /* خليها تاخد العرض كله */
+    margin: 20px auto;            /* وسطها أفقياً */
+  }
+
+  .info h2,
+  .info p {
+    text-align: center;
+    margin: 5px 0;
+  }
+
+
+.section-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+  width: 75%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+.project-card h2 {
+    margin: 15px 0 10px;
+    color: #1f2937;
+}
+
+.project-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+}
+/* شاشات الموبايل الصغيرة (عرض أقل من 576px) */
+@media (max-width: 576px) {
+  /* القائمة */
+  .links nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-menu {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  /* الهيدر */
+  .text-content h2 {
+    font-size: 24px;
+  }
+  .text-content p {
+    font-size: 16px;
+  }
+  .container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* الـ oo */
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    max-width: 100% !important;   /* خليها تاخد العرض كله */
+    margin: 20px auto;            /* وسطها أفقياً */
+  }
+
+  .info h2,
+  .info p {
+    text-align: center;
+    margin: 5px 0;
+  }
+  /* الكروت */
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    max-width: 100%;
+  }
+
+  /* الفوتر */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-nav a {
+    margin: 5px;
+    font-size: 14px;
+  }
+}
+
+ /*end of codes*/
