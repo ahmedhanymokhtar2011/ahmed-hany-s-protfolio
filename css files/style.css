@@ -321,7 +321,6 @@ header{
     transition: opacity 0.3s, transform 0.3s;
 }
 
-
 #backToTop:hover {
   background-color: #005ecc;
   transform: scale(1.1);
