@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -49,6 +49,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+text-decoration: none !important;
 }
 
 body {
@@ -85,24 +86,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Back button */
-.back-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0075ff;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.back-btn:hover {
-  background-color: transparent;
-  border: 1px solid #0075ff;
-  color: #555;
-}
-
 /* Image */
 .about-image {
   flex: 1 1 400px;
@@ -115,6 +98,58 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*btn*/
+
+.fancy-btn {
+  position: relative;
+  width: 190px;
+  height: 56px;
+  border-radius: 16px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   display: block;          /* يخلي الزرار block */
+    margin: 30px auto; 
+}
+
+
+.fancy-btn a p {
+  position: relative;
+  z-index: 20 !important;
+  transform: translateX(8px);
+  transition: opacity 0.5s ease; /* عشان يختفي بسلاسة */
+}
+
+.fancy-btn .btn-icon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 48px;
+  height: 48px;
+  background: #0075ff; /* أخضر */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: width 0.5s ease;
+}
+
+.fancy-btn:hover .btn-icon {
+  width: 182px; /* بيتمد لحد النص */
+}
+
+.fancy-btn:hover p {
+  opacity: 0; /* النص يختفي */
 }
 
 /* Responsive */

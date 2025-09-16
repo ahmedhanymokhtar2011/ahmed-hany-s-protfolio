@@ -40,3 +40,5 @@ function typeEffect() {
 }
 
 typeEffect();
+
+

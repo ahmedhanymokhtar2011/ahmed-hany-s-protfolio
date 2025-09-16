@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 
@@ -115,25 +116,54 @@ border: 1px solid rgba(255, 255, 255, 0.9);
 
 /*btn*/
 
-button {
-    padding: 20px;
-    background-color: #0075ff;
-    border: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 200;
-    margin: 10px;
-    margin-bottom: 20px !important;
-    border-radius: 50px;
-    transition: 1s;
-    cursor: pointer;
+.fancy-btn {
+  position: relative;
+  width: 190px;
+  height: 56px;
+  border-radius: 16px;
+  background: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   display: block;          /* يخلي الزرار block */
+    margin: 30px auto; 
 }
 
-button:hover{
-    background-color: transparent;
-    color: #1f2937;
-    border: 1px solid #1f2937;
 
+.fancy-btn a p {
+  position: relative;
+  z-index: 20 !important;
+  transform: translateX(8px);
+  transition: opacity 0.5s ease; /* عشان يختفي بسلاسة */
+}
+
+.fancy-btn .btn-icon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 48px;
+  height: 48px;
+  background: #0075ff; /* أخضر */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: width 0.5s ease;
+}
+
+.fancy-btn:hover .btn-icon {
+  width: 182px; /* بيتمد لحد النص */
+}
+
+.fancy-btn:hover p {
+  opacity: 0; /* النص يختفي */
 }
 
 
@@ -149,6 +179,9 @@ button:hover{
     }
     .list li {
         font-size: 20px;
+    }
+    p{
+        font-size: 13px;
     }
 }
 

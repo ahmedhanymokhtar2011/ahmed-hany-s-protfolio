@@ -4,6 +4,7 @@
     <link rel="icon" type="image/png" href="images/letter.jpeg">
     <link rel="stylesheet" href="css files/cert.css">
     <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"  />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>certificates</title>
 </head>
@@ -13,39 +14,52 @@
   <h2>My Certificates</h2>
   <div class="certificates-list">
     <div class="certificate-card">
-   <a href="https://codeliber.com/certificates/me8meatygmg5d">
       <img src="images/cert/html.png" alt="Certificate 2" onclick="openModal(this.src)">
-    </a>
-      <h3>HTML5</h3>
+       <a href="https://codeliber.com/certificates/me8meatygmg5d">
+  <h3>HTML5<i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+      </a>
       <p>Issued: Aug 2025</p>
     </div>
 
     <div class="certificate-card">
-<a href="https://codeliber.com/certificates/mebqnjj4v8dio"> 
     <img src="images/cert/css.png" alt="Certificate 1" onclick="openModal(this.src)">
-</a>
-      <h3>css & css3</h3>
+     <a href="https://codeliber.com/certificates/mebqnjj4v8dio"> 
+ <h3>css & css3<i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+ </a>
+
       <p>Issued: Aug 2025</p>
     </div>
 
     <div class="certificate-card">
-<a href="https://codeliber.com/certificates/me8ghtjbst71y"> 
     <img src="images/cert/download.png" alt="Certificate 1" onclick="openModal(this.src)">
-</a>
-      <h3>JavaScript Basics</h3>
+    <a href="https://codeliber.com/certificates/me8ghtjbst71y"> 
+  <h3>JavaScript Basics<i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
+  </a>
+
       <p>Issued: Aug 2025</p>
     </div>
 
 
 
     <div class="certificate-card">
-      <img src="images/cert/cv.jpg" alt="Certificate 3" onclick="openModal(this.src)">
+      <img src="images/cert/cv1.1.jpg" alt="Certificate 3" onclick="openModal(this.src)">
       <h3>my cv</h3>
       <p>in 2025</p>
     </div>
   </div>
 </section>
-  <a href="index.html" class="back-btn">Back to Home</a>
+  <a href="index.html">
+<button class="fancy-btn">
+  <div class="btn-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" height="25px" width="25px">
+      <path d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z" fill="#000000"></path>
+      <path d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z" fill="#000000"></path>
+    </svg>
+  </div>
+ <p>Go Back</p>
+
+</button>
+  </a>
 </section>
 
 
@@ -55,5 +69,8 @@
   <img class="modal-content" id="modal-img">
 </div>
     </div>
+    <button id="backToTop" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/cert.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
