@@ -5,13 +5,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+a{
+  text-decoration: none;
+}
 /* Navigation */
 header{
   position: sticky;  
   top: 0;
   z-index: 999;
 }
-
 
 .links nav {
   display: flex;
@@ -23,7 +25,7 @@ header{
 
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: bolder;
   color: #1f2937;
   display: flex;
   align-items: center;
@@ -130,6 +132,75 @@ header{
   font-weight: 200;
   margin-bottom: 20px;
 }
+
+/* 🔹 الأزرار جنب بعض */
+.btns {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap; /* يخليهم ينزلوا تحت بعض لو الشاشة صغيرة */
+}
+
+/*start cv btn*/
+.button {
+  position: relative;
+  width: 175px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #0075ff;
+  overflow: hidden;
+    padding: 15px 25px ;
+
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.5s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(200px);
+  height: 100%;
+  width: 39px;
+  background-color: #005ecc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button:hover {
+  background: #0075ff;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width:148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #146c54;
+}
+
+.button:active {
+  border: 1px solid #1f2937 !important;
+}/*end cv btn*/
 
 /* Profile Image */
 .image {
@@ -317,8 +388,8 @@ header{
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 #backToTop:hover {
@@ -359,19 +430,19 @@ header{
   .container {
     flex-direction: column;
     text-align: center;
-    gap: 15px;
+    gap: 20px;
   }
   .image{
-    margin-top: -250px;
+    margin-top: -105px; /* اتلغى الـ -250px عشان الصورة متبوظش */
   }
   .info {
     text-align: center;
     max-width: 100%;
     margin: 20px auto;
-    margin-top: 150px;
+    margin-top: 100px;
   }
   .projects-container{
-    margin-top: 200px;
+    margin-top: 150px;
   }
   .projects-list {
     grid-template-columns: 1fr;
@@ -385,14 +456,28 @@ header{
     margin: 5px;
     font-size: 14px;
   }
+  .btns {
+    flex-direction: column; /* يخليهم تحت بعض */
+    align-items: center;   /* يخليهم في النص */
+    gap: 30px !important;             /* مسافة متساوية بينهم */
+    width: 30%;
+   margin-top: 20px;
+
+  }
+
+  .btns button,
+  .btns .button { 
+    width:100px;  /* يخلي الزرارين قد بعض */
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
   .logo a{
-font-size: 16px;
+    font-size: 16px;
   }
   .burger{
-  font-size: 15px;
+    font-size: 15px;
   }
   .links nav {
     flex-direction: column;
@@ -403,6 +488,7 @@ font-size: 16px;
   }
   .text-content p {
     font-size: 16px;
+    margin-bottom: 50px;
   }
   .container img {
     width: 180px;
@@ -416,5 +502,17 @@ font-size: 16px;
   .footer-nav a {
     margin: 5px;
     font-size: 14px;
+  }
+  .btns {
+    flex-direction: column; /* يخليهم تحت بعض */
+    align-items: center;   /* يخليهم في النص */
+    gap: 15px;             /* مسافة متساوية بينهم */
+    width: 100%;
+  }
+
+  .btns button,
+  .btns .button { 
+    width: 200px;  /* يخلي الزرارين قد بعض */
+    text-align: center;
   }
 }
