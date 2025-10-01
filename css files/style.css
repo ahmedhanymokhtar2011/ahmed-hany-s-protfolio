@@ -145,14 +145,14 @@ header{
 .button {
   position: relative;
   width: 175px;
-  height: 55px;
+  height: 51px;
   cursor: pointer;
   display: flex;
   align-items: center;
   background-color: #0075ff;
   overflow: hidden;
     padding: 15px 25px ;
-
+text-align: center;
 }
 
 .button, .button__icon, .button__text {
@@ -230,6 +230,7 @@ header{
   transition: all 250ms;
   overflow: hidden;
   cursor: pointer;
+  text-align: center;
 }
 
 .text-content button::before,
