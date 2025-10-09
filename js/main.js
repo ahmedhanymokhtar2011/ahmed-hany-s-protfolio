@@ -10,7 +10,7 @@ closeBtn.addEventListener('click', () => {
   navMenu.classList.remove('show');
 });
 
-const words = ["Hi!,", "i'm a Junior ", "front-end Developer", "Freelancer"];
+const words = ["Hi!,", "i'm a Junior ", "front-end ","Developer", "Freelancer"];
 let i = 0;
 let j = 0;
 let currentWord = "";
