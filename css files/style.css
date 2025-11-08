@@ -20,7 +20,9 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #f8f8f8;
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .logo {
@@ -195,7 +197,7 @@ text-align: center;
 }
 
 .button:active .button__icon {
-  background-color: #146c54;
+  background-color: #005ecc;
 }
 
 .button:active {
